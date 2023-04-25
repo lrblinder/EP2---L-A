@@ -1,10 +1,10 @@
 def faz_jogada(tabuleiro,linha,coluna):
     
-    posicao = tabuleiro[coluna][linha]
+    posicao = tabuleiro[linha][coluna]
     if posicao == 1:
-        tabuleiro[coluna][linha] = "X"
+        tabuleiro[linha][coluna] = "X"
     else:
-        tabuleiro[coluna][linha] = "-"  
+        tabuleiro[linha][coluna] = "-"  
     return tabuleiro  
 tabuleiro =[[0, 0, 0, 1, '-', '-', 0, 0, 0, 0], 
         [0, 'X', '-', '-', '-', 1, 1, 1, 1, '-'],
