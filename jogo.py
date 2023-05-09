@@ -10,3 +10,4 @@ def define_posicoes(linha,coluna,orientacao,tamanho):
         lista_saida.append(posicao)    
     return lista_saida     
 
+
