@@ -1,0 +1,46 @@
+
+def analise_morfologica(string):
+    s2 = string.replace(",","").replace('.','').replace("!",'').replace("?","").replace(":","").replace(";","")
+    s3=s2.split()
+
+    adverbios=['sim', 'não', 'jamais', 'nunca', 'abaixo', 'acima', 'adentro', 'adiante', 'afora', 'aí', 'além', 'aqui', 'atrás', 'dentro', 'embaixo', 'externamente', 'lá', 'longe', 'perto', 'afinal', 'agora', 'amanhã', 'antes', 'ontem', 'breve', 'cedo',    'depois', 'enfim', 'hoje', 'imediatamente', 'jamais', 'nunca', 'sempre', 'outrora', 'primeiramente', 'tarde', 'provisoriamente', 'sucessivamente', 'já', 'possivelmente', 'provavelmente', 'talvez', 'bastante', 'demais', 'mais', 'menos', 'bem', 'muito', 'quanto', 'quão', 'quase', 'tanto', 'pouco', 'demasiado', 'imenso']
+    preposicoes=['à', 'ante', 'após', 'até', 'com', 'contra', 'de', 'desde', 'em', 'entre', 'para', 'per', 'perante', 'por', 'sem', 'sob', 'sobre', 'trás']
+    conjuncoes=[ 'e', 'mas', 'ou', 'pois', 'que', 'como', 'quanto']
+
+    adverbio = 0
+    preposicao=0
+    conjuncao = 0
+    outro=0
+    dic={}
+    
+
+    for palavra in s3:
+        if palavra in adverbios:
+            adverbio+=1
+        
+        if palavra in preposicoes:
+            preposicao+=1
+       
+        if palavra in conjuncoes:
+            conjuncao += 1
+        else:
+            outro +=1            
+
+    p_advb= str((adverbio/len(string))*100)+'%'
+    p_prep= str((preposicao/len(string))*100)+'%'
+    p_conj= str((conjuncao/len(string))*100)+'%'
+    p_out= str((outro/len(string))*100)+'%'
+
+    dic['adverbio']= p_advb
+    dic['preposicao']= p_prep
+    dic['conjuncao']=p_conj
+    dic['outras']= p_out
+
+    return dic
+
+string = 'jamais'
+r=analise_morofologica(string)
+print(r)
+
+
+           
