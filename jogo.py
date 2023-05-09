@@ -49,5 +49,17 @@ def posiciona_frota(frota):
             for i, j in lugar:
                 tabuleiro[i][j] = 1
     return tabuleiro
-        
+
+def afundados(frota, tabuleiro_atual):
+    soma = 0
+    for navio, posicoes in frota.items():
+        for lugar in posicoes:
+            afundado = True
+            for i, j in lugar:
+                if tabuleiro_atual[i][j] != 'X':
+                    afundado = False
+                    break
+            if afundado:
+                soma += 1
+    return soma
     
