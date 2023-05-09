@@ -103,8 +103,8 @@ resultado = posicao_valida(frota, linha, coluna, orientacao, tamanho)
 print(resultado)
 
 # adverbios= ['sim', 'não', 'jamais', 'nunca', 'abaixo', 'acima', 'adentro', 'adiante', 'afora', 'aí', 'além', 'aqui', 'atrás', 'dentro', 'embaixo', 'externamente', 'lá', 'longe', 'perto', 'afinal', 'agora', 'amanhã', 'antes', 'ontem', 'breve', 'cedo',   , 'depois', 'enfim', 'hoje', 'imediatamente', 'jamais', 'nunca', 'sempre', 'outrora', 'primeiramente', 'tarde', 'provisoriamente', 'sucessivamente', 'já', 'possivelmente', 'provavelmente', 'talvez', 'bastante', 'demais', 'mais', 'menos', 'bem', 'muito', 'quanto', 'quão', 'quase', 'tanto', 'pouco', 'demasiado', 'imenso']
-preposicoes=['à', 'ante', 'após', 'até', 'com', 'contra', 'de', 'desde', 'em', 'entre', 'para', 'per', 'perante', 'por', 'sem', 'sob', 'sobre', 'trás']
-conjuncoes=[ 'e', 'mas', 'ou', 'pois', 'que', 'como', 'quanto']
+# preposicoes=['à', 'ante', 'após', 'até', 'com', 'contra', 'de', 'desde', 'em', 'entre', 'para', 'per', 'perante', 'por', 'sem', 'sob', 'sobre', 'trás']
+# conjuncoes=[ 'e', 'mas', 'ou', 'pois', 'que', 'como', 'quanto']
 def analise_morofologica(string):
     s2 = string.replace(",","").replace('.','').replace("!",'').replace("?","").replace(":","").replace(";","")
     s3=s2.split()
