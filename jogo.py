@@ -19,6 +19,24 @@ def define_posicoes(linha,coluna,orientacao,tamanho):
         lista_saida.append(posicao)    
     return lista_saida     
 
+def posicao_valida(frota,linha,coluna,orientacao,tamanho):
+    
+
+    lista_ocupados=[]
+    lista_posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
+    for i in frota.values():
+        for navio in i:
+            for posicao in navio:
+                if posicao  in lista_posicoes:
+                     return False 
+          
+    # Verificar dentro tabuleiro 
+    for posicao in lista_posicoes:
+        if posicao[0] <0 or posicao[0] >9 or posicao[1] <0 or posicao[1] >9:
+                    return False
+                
+    return True
+
 
 def faz_jogada(tabuleiro,linha,coluna):
     print (tabuleiro)
@@ -62,4 +80,6 @@ def afundados(frota, tabuleiro_atual):
             if afundado:
                 soma += 1
     return soma
+
+
     
