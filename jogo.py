@@ -20,3 +20,11 @@ def define_posicoes(linha,coluna,orientacao,tamanho):
     return lista_saida     
 
 
+def faz_jogada(tabuleiro,linha,coluna):
+    print (tabuleiro)
+    posicao = tabuleiro[linha][coluna]
+    if posicao == 1:
+        tabuleiro[linha][coluna] = "X"
+    else:
+        tabuleiro[linha][coluna] = "-"  
+    return tabuleiro    
