@@ -104,23 +104,6 @@ def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
     return frota
 
 
-def posicao_valida(frota: dict, linha: int, coluna: int, orientacao: str, tamanho: int) -> bool:
-    posicoes_ocupadas = []
-    for i in frota.values():
-        for j in i:
-            for k in j:
-                posicoes_ocupadas.append(k)
-
-    posicao = define_posicoes(linha, coluna, orientacao, tamanho)
-    for i in posicao:
-        if i[0] >= 10 or i[1] >= 10:
-            return False
-    for i in posicao:
-        if i in posicoes_ocupadas:
-            return False
-    return True
-
-
 navios = {
     "porta-aviões": {'quantidade': 1, 'tamanho': 4},
     "navio-tanque": {'quantidade': 2, 'tamanho': 3},
